@@ -1,0 +1,501 @@
+
+<!DOCTYPE html>
+<html lang="id" class="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tahapan Proyek Development</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style2.css" />
+  <script src="script.js" defer></script>
+</head>
+<body class="transition-colors duration-300">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white dark:bg-gray-900 shadow-md py-4 px-4">
+    <div class="max-w-3xl mx-auto flex justify-between items-center">
+      <div>
+        <h1 class="text-xl font-bold text-blue-600 dark:text-blue-400">Tahapan Proyek Development</h1>
+        <p class="text-xs text-gray-600 dark:text-gray-400 mt-1">Dari Perencanaan hingga Rilis</p>
+      </div>
+      <button id="theme-toggle" class="p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-600 transition">
+        <i class="fas fa-moon hidden dark:inline"></i>
+        <i class="fas fa-sun dark:hidden"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-3xl mx-auto px-4 py-6 space-y-6">
+    <!-- Intro Section -->
+    <section id="intro" class="bg-white dark:bg-gray-800 p-5 rounded-xl border-l-4 border-blue-500 shadow-sm">
+      <h2 class="font-bold text-lg text-blue-700 dark:text-blue-400 mb-3">Pengenalan Dasar Proyek</h2>
+      
+      <h3 class="font-semibold mt-4 mb-2">Apa itu Proyek?</h3>
+      <p class="text-sm leading-relaxed text-gray-800 dark:text-gray-200">
+        Proyek adalah suatu usaha bersifat sementara yang dilakukan untuk menciptakan produk, layanan, atau hasil unik dengan tujuan dan output yang telah ditentukan dengan jelas. Berbeda dengan pekerjaan rutin yang terus berlanjut, proyek memiliki karakteristik khusus: memiliki awal dan akhir yang jelas, melibatkan tim dengan peran dan tanggung jawab yang spesifik, memerlukan alokasi sumber daya seperti anggaran, tools, dan tenaga kerja, serta berjalan dalam periode waktu yang terbatas.
+      </p>
+      <p class="text-sm mt-2 text-gray-800 dark:text-gray-200">
+        Contoh proyek bisa sangat beragam, mulai dari pengembangan perangkat lunak (aplikasi web, mobile app, game), pembuatan produk fisik (hardware), hingga proyek non-teknis seperti event organizing atau marketing campaign. Setiap proyek memiliki keunikan tersendiri sesuai dengan kebutuhan dan tujuan yang ingin dicapai. Fokus materi ini adalah pada metodologi pengembangan proyek secara umum, yang dapat diterapkan pada berbagai jenis proyek, tidak terbatas hanya pada aplikasi atau game saja.
+      </p>
+
+      <h3 class="font-semibold mt-4 mb-2">Mengapa Tahapan Terstruktur Diperlukan?</h3>
+      <ul class="list-disc pl-5 mt-2 text-sm text-gray-800 dark:text-gray-200 space-y-1">
+        <li>Perencanaan yang matang sejak awal mengurangi perubahan kebutuhan di tengah pengerjaan proyek, yang berarti pekerjaan ulang (rework) dan biaya tambahan dapat diminimalkan.</li>
+        <li>Dengan tahapan yang terdefinisi, tim dapat melakukan tracking progress lebih akurat, sehingga keterlambatan dapat dideteksi lebih awal dan tindakan perbaikan dapat diambil dengan cepat.</li>
+        <li>Tahapan quality check yang sistematis memastikan hasil proyek berkualitas tinggi dan masalah kritis dapat ditemukan sebelum proyek diserahkan kepada stakeholder atau pengguna.</li>
+        <li>Dokumentasi yang terstruktur memudahkan pemeliharaan proyek di masa depan dan membantu anggota tim baru memahami konteks proyek dengan lebih cepat.</li>
+      </ul>
+    </section>
+
+    <!-- Tahap 1 -->
+    <div class="accordion-item bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-sm border-l-4 border-blue-500">
+      <button class="accordion-header w-full flex justify-between items-center p-5 text-left font-semibold text-blue-600 dark:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-700 transition">
+        <span>1. Inisiasi dan Perencanaan</span>
+        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+      </button>
+      <div class="accordion-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-gray-50 dark:bg-gray-700 text-sm text-gray-800 dark:text-gray-200">
+        <div class="p-5">
+          <p class="mb-3">
+            Tahap inisiasi adalah fondasi dari seluruh proyek. Pada tahap ini, tim dan stakeholder perlu menyepakati apa yang akan dikerjakan, mengapa proyek ini penting, siapa yang akan memanfaatkan hasil proyek, dan berapa waktu serta sumber daya yang tersedia.
+          </p>
+          <p class="mb-4">
+            Tanpa perencanaan yang matang pada tahap ini, proyek akan berjalan tanpa arah yang jelas dan mudah mengalami scope creep (penambahan pekerjaan di luar rencana awal). Scope creep adalah musuh utama proyek karena dapat menyebabkan timeline meleset, budget membengkak, dan tim menjadi stress.
+          </p>
+
+          <h4 class="font-semibold mt-4 mb-2">Identifikasi Tujuan dan Scope Proyek</h4>
+          <p>
+            Langkah pertama adalah mendefinisikan dengan jelas apa tujuan dari proyek yang akan dikerjakan. Tujuan harus SMART: Specific (jelas dan spesifik, bukan vague), Measurable (terukur, sehingga bisa diketahui kapan proyek berhasil), Achievable (realistis dan dapat dicapai dengan sumber daya yang ada), Relevant (relevan dengan kebutuhan stakeholder), dan Time-bound (memiliki deadline yang jelas).
+          </p>
+          <p class="mt-2">
+            Contoh tujuan yang baik: "Mengembangkan aplikasi web untuk manajemen inventori yang dapat menangani 1000 produk dan dapat diakses dari web dan mobile, selesai dalam 3 bulan dengan budget 50 juta rupiah" atau "Membuat sistem booking ruang meeting yang user-friendly dengan notifikasi real-time, dirilis bulan depan".
+          </p>
+          <p class="mt-2">
+            Selain itu, scope proyek perlu didefinisikan dengan jelas—apa deliverable utama yang harus dihasilkan dan apa yang tidak termasuk dalam proyek ini. Batasan ini penting untuk mencegah proyek meluas tanpa batas.
+          </p>
+
+          <h4 class="font-semibold mt-4 mb-2">Identifikasi Stakeholder dan Kebutuhan Pengguna</h4>
+          <p>
+            Stakeholder dapat berupa klien yang memesan proyek, pengguna akhir yang akan memanfaatkan hasil proyek, atau investor yang mendanai proyek. Setiap stakeholder memiliki kebutuhan dan ekspektasi yang mungkin berbeda. Oleh karena itu, perlu dilakukan wawancara atau workshop untuk mengumpulkan kebutuhan mereka secara mendalam.
+          </p>
+          <p class="mt-2">
+            Pertanyaan yang perlu dijawab antara lain: Apa masalah utama yang ingin diselesaikan? Siapa yang akan menggunakan hasil proyek ini? Apa success criteria dari proyek ini? Apa constraint yang ada (timeline, budget, teknologi)? Dengan memahami kebutuhan stakeholder dengan baik, kemungkinan proyek sukses dan memuaskan semua pihak menjadi jauh lebih tinggi.
+          </p>
+
+          <h4 class="font-semibold mt-4 mb-2">Penyusunan Project Requirement Document (PRD) atau Specification Document</h4>
+          <p>
+            Dokumen ini adalah blueprint dari proyek yang akan dikerjakan. Untuk proyek software, dokumen ini bisa berupa Software Requirement Specification (SRS), sementara untuk proyek lain bisa berupa Project Charter atau PRD. Dokumen ini harus mendeskripsikan secara detail apa yang ingin dicapai, fitur atau deliverable apa yang akan dihasilkan, persyaratan teknis atau metodologi apa yang akan digunakan, siapa target pengguna atau beneficiaries, dan constraint apa yang ada.
+          </p>
+          <p class="mt-2">
+            Dokumen ini menjadi referensi bagi seluruh tim untuk memastikan semua bekerja ke arah yang sama dan tidak ada miskomunikasi tentang apa yang seharusnya dihasilkan.
+          </p>
+
+          <h4 class="font-semibold mt-4 mb-2">Perencanaan Timeline, Tim, dan Resources</h4>
+          <p>
+            Setelah requirement didefinisikan, perlu dibuat estimasi waktu untuk setiap tahap. Berapa minggu untuk tahap desain, berapa minggu untuk tahap implementasi, berapa minggu untuk tahap testing? Ini penting untuk membuat timeline yang realistis dan menghindari optimistic planning yang menyebabkan delay.
+          </p>
+          <p class="mt-2">
+            Selain itu, perlu ditentukan siapa yang akan melakukan apa dalam tim—siapa yang bertanggung jawab untuk design, siapa yang menangani development, siapa yang melakukan quality assurance, siapa yang menjadi project manager atau team lead. Setiap anggota tim perlu memahami peran dan tanggung jawab mereka dengan jelas.
+          </p>
+          <p class="mt-2">
+            Dari sisi resources, perlu disepakati tools atau teknologi apa yang akan digunakan, berapa budget yang dialokasikan, dan apa prerequisite atau skill yang tim butuhkan untuk mengerjakan proyek dengan baik.
+          </p>
+
+          <h4 class="font-semibold mt-4 mb-2">Aktivitas Utama Tahap Inisiasi</h4>
+          <ul class="list-disc pl-5 mt-2 space-y-1">
+            <li><strong>Project Charter atau Project Brief:</strong> Dokumen singkat (1-2 halaman) yang merangkum tujuan, scope, stakeholder, dan success criteria proyek</li>
+            <li><strong>Requirement Document (PRD/SRS):</strong> Dokumen komprehensif berisi apa yang ingin dicapai, fitur atau deliverable apa yang akan dihasilkan, acceptance criteria, dan constraint</li>
+            <li><strong>Project Timeline:</strong> Breakdown tahapan proyek dengan milestone utama dan estimasi waktu untuk setiap tahap</li>
+            <li><strong>Resource Plan:</strong> Daftar tim member, peran masing-masing, dan resource lain yang dibutuhkan (tools, equipment, budget)</li>
+            <li><strong>Risk Assessment:</strong> Identifikasi potensi risiko yang mungkin terjadi dan rencana mitigasinya</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tahap 2 -->
+    <div class="accordion-item bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-sm border-l-4 border-blue-500">
+      <button class="accordion-header w-full flex justify-between items-center p-5 text-left font-semibold text-blue-600 dark:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-700 transition">
+        <span>2. Analisis, Desain, dan Prototyping</span>
+        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+      </button>
+      <div class="accordion-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-gray-50 dark:bg-gray-700 text-sm text-gray-800 dark:text-gray-200">
+        <div class="p-5">
+          <p class="mb-3">
+            Setelah requirement dikumpulkan pada tahap sebelumnya, tahap berikutnya adalah menganalisis requirement tersebut secara lebih mendalam dan merancang bagaimana proyek akan dikerjakan. Tahap ini melibatkan pemecahan masalah, merancang solusi, merencanakan alur kerja, dan membuat mockup atau prototype untuk validasi ide.
+          </p>
+          <p class="mb-4">
+            Analisis dan desain yang baik pada tahap ini akan menghemat waktu dan biaya di tahap implementasi karena arah pekerjaan sudah jelas.
+          </p>
+
+          <h4 class="font-semibold mt-4 mb-2">Breakdown Requirement menjadi Task atau User Story</h4>
+          <p>
+            Requirement yang sudah dikumpulkan perlu dipecah menjadi task-task yang lebih kecil dan manageable. Salah satu cara populer adalah menggunakan user story, yaitu mendeskripsikan fitur dari perspektif pengguna dalam format: "Sebagai [tipe pengguna], saya ingin [action], sehingga [manfaat]".
+          </p>
+          <p class="mt-2">
+            Contoh: "Sebagai pelanggan, saya ingin dapat melakukan pencarian produk berdasarkan kategori, sehingga saya dapat menemukan produk yang saya cari dengan lebih cepat".
+          </p>
+          <p class="mt-2">
+            User story membantu tim memahami tidak hanya apa yang perlu dikerjakan, tapi juga mengapa hal itu penting dari perspektif pengguna. Untuk proyek non-software, breakdown requirement bisa berupa work breakdown structure (WBS) yang memetakan pekerjaan utama menjadi sub-pekerjaan yang lebih spesifik. Ini membantu dalam estimasi waktu, alokasi resource, dan tracking progress.
+          </p>
+
+          <h4 class="font-semibold mt-4 mb-2">Prioritasi Deliverable</h4>
+          <p>
+            Tidak semua deliverable atau fitur memiliki urgensi yang sama. Dengan menggunakan teknik seperti MoSCoW (Must have—harus ada di rilis pertama, Should have—penting tapi bisa ditambah nanti, Could have—nice to have, Won't have—tidak akan dibuat), tim dapat memprioritaskan apa yang perlu dikerjakan dulu.
+          </p>
+          <p class="mt-2">
+            Ini penting untuk mengontrol scope dan memastikan proyek dapat diselesaikan tepat waktu dengan deliverable esensial terlebih dahulu. Misalnya, untuk aplikasi e-commerce, fitur must-have adalah product catalog dan checkout, sementara fitur could-have bisa berupa recommendation engine atau loyalty program.
+          </p>
+
+          <h4 class="font-semibold mt-4 mb-2">Desain Arsitektur atau Struktur Pekerjaan</h4>
+          <p>
+            Untuk proyek software, desain arsitektur mendeskripsikan bagaimana komponen-komponen sistem disusun dan saling berkomunikasi. Untuk proyek non-software, desain ini bisa berupa planning bagaimana pekerjaan akan diorganisir, siapa yang mengerjakan apa, dan bagaimana deliverable dari satu bagian menjadi input untuk bagian lain.
+          </p>
+          <p class="mt-2">
+            Diagram atau visual yang menunjukkan struktur ini sangat membantu tim memahami big picture.
+          </p>
+
+          <h4 class="font-semibold mt-4 mb-2">Membuat Desain dan Mockup</h4>
+          <p>
+            Sebelum implementasi dimulai, perlu dibuat design atau rencana visual dari hasil yang akan dihasilkan. Untuk aplikasi, ini berupa wireframe (sketsa layout yang simple) atau mockup (visual yang lebih detail). Untuk proyek lain seperti website atau marketing material, mockup menunjukkan bagaimana tampilan final akan seperti apa.
+          </p>
+          <p class="mt-2">
+            Wireframe dan mockup ini penting untuk validasi dengan stakeholder—apakah arah design sudah sesuai dengan ekspektasi mereka atau masih perlu adjustment sebelum implementasi dimulai.
+          </p>
+
+          <h4 class="font-semibold mt-4 mb-2">Membuat Flowchart atau Proses Workflow</h4>
+          <p>
+            Untuk memastikan alur kerja jelas, perlu dibuat flowchart atau diagram yang menunjukkan bagaimana proses akan berjalan, dari input awal hingga output akhir. Ini membantu mengidentifikasi bottleneck atau bagian yang belum jelas sebelum implementasi dimulai.
+          </p>
+          <p class="mt-2">
+            Flowchart juga berguna untuk dokumentasi dan training tim member baru di masa depan.
+          </p>
+
+          <h4 class="font-semibold mt-4 mb-2">Prototyping dan Validasi</h4>
+          <p>
+            Setelah desain selesai, membuat prototype atau proof of concept dari ide utama dapat sangat membantu untuk validasi dengan stakeholder dan pengguna sebelum implementasi full-scale dimulai. Prototype bisa berupa demo sederhana yang menunjukkan alur utama atau mockup interactive yang bisa di-click.
+          </p>
+          <p class="mt-2">
+            Dengan prototype ini, stakeholder dapat memberikan feedback lebih awal, sehingga perubahan atau adjustment dapat dilakukan dengan biaya lebih rendah dan rework lebih sedikit. Prototipe juga membantu mengidentifikasi technical challenge yang mungkin tidak terlihat hanya dari design di atas kertas.
+          </p>
+
+          <h4 class="font-semibold mt-4 mb-2">Deliverable Tahap Analisis dan Desain</h4>
+          <ul class="list-disc pl-5 mt-2 space-y-1">
+            <li>User Story atau Task List: Breakdown requirement menjadi user story atau task yang manageable</li>
+            <li>Wireframe dan Mockup: Visual dari design atau layout yang akan dikerjakan</li>
+            <li>Process Flowchart: Diagram menunjukkan alur proses dari awal hingga akhir</li>
+            <li>Architecture atau Structure Diagram: Menunjukkan bagaimana komponen-komponen atau bagian pekerjaan disusun</li>
+            <li>Prototype atau Proof of Concept: Demonstrasi dari ide atau konsep utama</li>
+            <li>Design Guideline atau Standard: Pedoman atau standard yang akan diikuti dalam implementasi</li>
+            <li>Analisis Risiko dan Mitigation Plan: Identifikasi risiko yang mungkin terjadi dan rencana mengatasinya</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tahap 3 -->
+    <div class="accordion-item bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-sm border-l-4 border-blue-500">
+      <button class="accordion-header w-full flex justify-between items-center p-5 text-left font-semibold text-blue-600 dark:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-700 transition">
+        <span>3. Implementasi dan Eksekusi</span>
+        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+      </button>
+      <div class="accordion-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-gray-50 dark:bg-gray-700 text-sm text-gray-800 dark:text-gray-200">
+        <div class="p-5">
+          <p class="mb-3">
+            Tahap implementasi adalah ketika rencana dan desain diterjemahkan menjadi hasil nyata. Ini adalah tahap yang biasanya paling panjang dalam proyek karena melibatkan pekerjaan teknis yang detail. Tahap ini memerlukan koordinasi tim yang baik, disiplin dalam mengikuti rencana, dan komunikasi regular untuk memastikan semua berjalan sesuai timeline.
+          </p>
+          <p class="mb-4">
+            Pada tahap ini, quality control juga harus dimulai—tidak menunggu sampai akhir proyek untuk mengecek kualitas pekerjaan.
+          </p>
+
+          <h4 class="font-semibold mt-4 mb-2">Sprint Planning atau Iteration Planning</h4>
+          <p>
+            Jika menggunakan metodologi iteratif (seperti Agile), implementasi dibagi menjadi sprint atau iteration (periode kerja pendek, biasanya 1-2 minggu). Sebelum setiap sprint dimulai, tim merencanakan apa yang akan dikerjakan dalam sprint tersebut.
+          </p>
+          <p class="mt-2">
+            Setiap pekerjaan harus dipecah menjadi task yang spesifik dan dapat diselesaikan dalam waktu satu sprint. Ini membantu track progress dengan lebih akurat dan membuat adjustment jika ada keterlambatan. Misalnya, untuk proyek software, task bisa berupa "Membuat API login", "Membuat halaman dashboard", atau "Implementasi sistem notifikasi".
+          </p>
+
+          <h4 class="font-semibold mt-4 mb-2">Pembagian Peran dan Tanggung Jawab</h4>
+          <p>
+            Dalam setiap tim, perlu ada role yang jelas. Siapa yang menjadi project manager atau tech lead? Siapa yang menangani design, implementasi, testing? Siapa yang bertanggung jawab untuk dokumentasi?
+          </p>
+          <p class="mt-2">
+            Setiap anggota tim perlu tahu apa peran dan tanggung jawab mereka, siapa mentor atau lead mereka jika ada pertanyaan, dan kapan deadline mereka. Role clarity ini mencegah confusion dan memastikan tidak ada pekerjaan yang terlewat atau dikerjakan oleh dua orang sekaligus.
+          </p>
+
+          <h4 class="font-semibold mt-4 mb-2">Mengikuti Rencana dan Deliverable yang Sudah Disepakati</h4>
+          <p>
+            Hal mendasar dalam tahap implementasi adalah mengikuti rencana yang sudah dibuat pada tahap sebelumnya. Jika ada perubahan atau tambahan pekerjaan di luar rencana, harus didiskusikan dengan stakeholder dan dievaluasi dampaknya terhadap timeline dan resource. Tanpa discipline ini, scope creep akan terjadi dan proyek akan mudah mengalami delay.
+          </p>
+
+          <h4 class="font-semibold mt-4 mb-2">Organisasi Pekerjaan dan Progress Tracking</h4>
+          <p>
+            Untuk proyek yang kompleks, gunakan tools untuk track progress seperti spreadsheet, kanban board (Trello, Jira), atau project management tools lainnya. Setiap task harus ter-assign ke satu atau lebih orang, memiliki deadline, dan statusnya di-update regular.
+          </p>
+          <p class="mt-2">
+            Daily standup meeting atau check-in yang singkat (15-30 menit) sangat membantu untuk memastikan tim tetap aligned dan mengidentifikasi blocking issue dengan cepat.
+          </p>
+
+          <h4 class="font-semibold mt-4 mb-2">Dokumentasi Perkembangan dan Pengetahuan</h4>
+          <p>
+            Dokumentasi harus dimulai sejak awal, jangan menunggu sampai akhir proyek. Ini bisa berupa dokumentasi teknis (bagaimana komponen bekerja, arsitektur decision, API documentation), atau dokumentasi proses (bagaimana cara melakukan X, troubleshooting guide).
+          </p>
+          <p class="mt-2">
+            Dokumentasi yang baik memudahkan orang lain (atau diri sendiri di masa depan) memahami pekerjaan yang sudah dilakukan dan mempercepat onboarding tim member baru.
+          </p>
+
+          <h4 class="font-semibold mt-4 mb-2">Quality Control Selama Implementasi</h4>
+          <p>
+            Quality check tidak hanya dilakukan di akhir proyek, tapi sejak implementasi dimulai. Ini bisa berupa peer review dari teman satu tim, testing berkala untuk memastikan tidak ada regression, atau checklist yang diverifikasi sebelum suatu bagian pekerjaan dianggap selesai.
+          </p>
+          <p class="mt-2">
+            Early quality control menghemat waktu dan biaya dibanding memperbaiki masalah di akhir.
+          </p>
+
+          <h4 class="font-semibold mt-4 mb-2">Komunikasi Regular dengan Stakeholder</h4>
+          <p>
+            Status update regular dengan stakeholder sangat penting untuk memastikan ekspektasi tetap aligned. Bukannya memberikan surprise di akhir proyek, lebih baik transparansi tentang progress, challenge, dan adjustment yang diperlukan.
+          </p>
+          <p class="mt-2">
+            Ini juga memberi kesempatan stakeholder untuk memberikan feedback atau adjustment di awal daripada di akhir.
+          </p>
+
+          <h4 class="font-semibold mt-4 mb-2">Deliverable Tahap Implementasi</h4>
+          <ul class="list-disc pl-5 mt-2 space-y-1">
+            <li>Working Deliverable: Hasil pekerjaan yang sudah selesai dan berfungsi sesuai requirement (bisa berupa software build, dokumen, design, video, dll)</li>
+            <li>Project Progress Report: Update tentang apa yang sudah selesai, apa yang sedang dikerjakan, dan apa yang akan dikerjakan selanjutnya</li>
+            <li>Documentation: Dokumentasi teknis dan proses tentang pekerjaan yang sudah dilakukan</li>
+            <li>Risk Register Update: Identifikasi risiko baru yang muncul dan mitigation plan</li>
+            <li>Regular Build/Version: Versi intermediate dari hasil kerja yang bisa di-evaluate oleh stakeholder</li>
+            <li>Change Log: Catatan perubahan atau adjustment yang dilakukan beserta alasan dan dampaknya</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tahap 4 -->
+    <div class="accordion-item bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-sm border-l-4 border-blue-500">
+      <button class="accordion-header w-full flex justify-between items-center p-5 text-left font-semibold text-blue-600 dark:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-700 transition">
+        <span>4. Quality Assurance dan Refinement</span>
+        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+      </button>
+      <div class="accordion-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-gray-50 dark:bg-gray-700 text-sm text-gray-800 dark:text-gray-200">
+        <div class="p-5">
+          <p class="mb-3">
+            QA adalah tahap kritis untuk memastikan hasil proyek berkualitas tinggi sebelum diserahkan ke stakeholder atau pengguna. Tahap ini bukan hanya tentang menemukan kesalahan, tapi juga memvalidasi bahwa deliverable memenuhi requirement, sesuai dengan rencana, dan acceptable oleh stakeholder. QA yang komprehensif dapat mencegah problem signifikan di masa depan.
+          </p>
+
+          <h4 class="font-semibold mt-4 mb-2">Jenis-Jenis Quality Check</h4>
+          <p><strong>Compliance Testing / Requirement Verification:</strong> Ini memverifikasi bahwa setiap deliverable sesuai dengan requirement yang sudah didefinisikan di awal. Untuk aplikasi, ini berarti setiap fitur berfungsi seperti yang dispesifikasikan. Untuk proyek lain seperti design atau dokumentasi, ini berarti setiap elemen sudah sesuai dengan brief dan specification. Setiap requirement harus ter-checklist sebagai "complete" atau "pass" sebelum proyek dianggap selesai.</p>
+
+          <p class="mt-3"><strong>Quality Checklist:</strong> Sebelum suatu deliverable diterima, perlu ada quality checklist yang diverifikasi. Checklist ini bisa berupa: "Semua fitur berfungsi sesuai spec?", "Interface konsisten?", "Tidak ada error atau warning?", "Dokumentasi lengkap?", "Code/design review passed?". Dengan checklist yang jelas, quality control menjadi sistematis dan konsisten.</p>
+
+          <p class="mt-3"><strong>User Testing atau Stakeholder Review:</strong> Libatkan stakeholder atau end user untuk menguji atau review hasil pekerjaan dengan use case mereka yang real. Feedback mereka sangat valuable untuk mengidentifikasi issue yang mungkin terlewatkan oleh tim development. Misalnya, interface yang menurut developer sudah bagus, mungkin terasa membingungkan dari perspektif end user.</p>
+
+          <p class="mt-3"><strong>Usability Testing:</strong> Untuk proyek yang melibatkan interface atau user interaction, usability testing sangat penting. Ini mengukur apakah interface intuitif, mudah dipelajari, dan enjoyable digunakan. Usability problem dapat di-identify melalui observation saat pengguna menggunakan produk atau melalui questionnaire.</p>
+
+          <p class="mt-3"><strong>Performance Check:</strong> Untuk aplikasi atau sistem, perlu dicheck apakah berjalan dengan performa yang diharapkan. Ini bisa berupa load time halaman, response time API, atau berapa banyak user yang bisa dilayani secara concurrent. Performance yang buruk dapat membuat user frustration dan bad impression terhadap produk.</p>
+
+          <p class="mt-3"><strong>Documentation Review:</strong> Dokumentasi juga perlu di-review untuk memastikan lengkap, akurat, dan mudah dimengerti. Dokumentasi yang buruk dapat menyulitkan troubleshooting di masa depan dan onboarding tim member baru.</p>
+
+          <h4 class="font-semibold mt-4 mb-2">Aktivitas Refinement</h4>
+          <p><strong>Issue Tracking dan Prioritization:</strong> Setiap issue atau problem yang ditemukan harus dicatat dengan detail lengkap: deskripsi, langkah untuk reproduce, severity level, dan screenshot jika perlu. Issue kemudian diprioritaskan berdasarkan severity—issue kritis yang menghalangi deliverable harus di-fix immediately, sementara issue minor dapat ditunda. Tracking tools seperti spreadsheet atau issue tracker dapat membantu organize ini.</p>
+
+          <p class="mt-3"><strong>Fixing dan Refinement:</strong> Berdasarkan feedback dan issue yang ditemukan, dilakukan fixing dan refinement. Untuk software, ini bisa berupa code fix, UI improvement, atau dokumentasi correction. Untuk proyek non-software, ini bisa berupa design adjustment, content rewrite, atau process improvement. Setiap fix perlu di-verify kembali untuk memastikan tidak ada regression.</p>
+
+          <p class="mt-3"><strong>Final Review dan Sign-off:</strong> Sebelum deliverable dianggap final, perlu ada review terakhir dari stakeholder atau client untuk memastikan semua sudah sesuai expectation dan acceptable. Sign-off ini adalah konfirmasi bahwa deliverable sudah siap untuk next phase (rilis, deployment, atau handover).</p>
+
+          <h4 class="font-semibold mt-4 mb-2">Deliverable Tahap Quality Assurance</h4>
+          <ul class="list-disc pl-5 mt-2 space-y-1">
+            <li>Quality Assurance Report: Hasil dari QA testing termasuk issue yang ditemukan, severity, dan status fixing</li>
+            <li>Test Cases dan Test Results: Dokumentasi apa yang di-test dan hasilnya</li>
+            <li>Usability Feedback: Feedback dari user testing tentang user experience</li>
+            <li>Performance Report: Hasil dari performance check</li>
+            <li>Final Approval / Sign-off: Persetujuan dari stakeholder bahwa deliverable ready for release</li>
+            <li>Release Notes atau Change Log: Daftar apa yang sudah selesai, improvement, dan fix yang dilakukan</li>
+            <li>Known Issues atau Limitation: Dokumentasi tentang issue yang masih ada atau keterbatasan yang diketahui</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tahap 5 -->
+    <div class="accordion-item bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-sm border-l-4 border-blue-500">
+      <button class="accordion-header w-full flex justify-between items-center p-5 text-left font-semibold text-blue-600 dark:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-700 transition">
+        <span>5. Rilis, Handover, dan Penutupan Proyek</span>
+        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+      </button>
+      <div class="accordion-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-gray-50 dark:bg-gray-700 text-sm text-gray-800 dark:text-gray-200">
+        <div class="p-5">
+          <p class="mb-3">
+            Tahap rilis adalah ketika deliverable final diluncurkan atau diserahkan ke stakeholder dan pengguna. Ini adalah momen penting yang perlu direncanakan dengan baik untuk memastikan transisi yang smooth dan meminimalkan masalah. Setelah rilis, ada juga tahap penutupan proyek di mana tim melakukan evaluasi dan dokumentasi untuk future reference.
+          </p>
+
+          <h4 class="font-semibold mt-4 mb-2">Aktivitas Persiapan Rilis</h4>
+          <p><strong>Pre-Release Checklist:</strong> Sebelum rilis, perlu dilakukan checklist final untuk memastikan semua ready. Checklist ini bisa berupa: Sudah ada approval dari stakeholder? Dokumentasi sudah lengkap dan akurat? Semua issue kritis sudah di-fix? Release notes sudah disiapkan? Backup sudah dilakukan? Komunikasi dengan user sudah dilakukan? Dengan checklist ini, rilis dapat dilakukan dengan confidence bahwa tidak ada yang terlewat.</p>
+
+          <p class="mt-3"><strong>Communication dan Training:</strong> Stakeholder dan end user perlu diberitahu tentang rilis yang akan datang. Ini bisa berupa email announcement, training session, atau user documentation yang tersedia. Training penting terutama jika ada perubahan signifikan dalam product atau proses. Good communication mengurangi confusion dan support ticket yang tidak perlu.</p>
+
+          <p class="mt-3"><strong>Release Planning:</strong> Perlu di-plan kapan rilis akan dilakukan, berapa lama downtime yang diperkirakan (jika ada), dan siapa yang akan on-call untuk support jika ada issue. Release yang dilakukan di luar jam kerja atau weekend dapat mengurangi disruption ke user bisnis.</p>
+
+          <h4 class="font-semibold mt-4 mb-2">Aktivitas Rilis dan Handover</h4>
+          <p><strong>Deployment atau Distribution:</strong> Deployment adalah proses menyampaikan deliverable ke production atau end user. Untuk software application, ini berarti menempatkan code dan database ke server production. Untuk proyek lain seperti design atau dokumentasi, ini berarti distribution ke stakeholder atau pengguna melalui medium yang sesuai. Deployment harus dilakukan carefully untuk meminimalkan issue dan downtime.</p>
+
+          <p class="mt-3"><strong>Monitoring dan Support:</strong> Setelah rilis, monitoring ketat terhadap error, performance, dan user feedback perlu dilakukan untuk quick issue detection dan resolution. Tim support harus siap untuk handle pertanyaan atau masalah dari user. Early issue detection dan response yang cepat dapat mencegah kecil issue menjadi masalah besar.</p>
+
+          <p class="mt-3"><strong>Documentation dan Knowledge Handover:</strong> Dokumentasi lengkap sangat penting untuk mendukung pengguna dan support team di masa depan. Ini bisa berupa user documentation (bagaimana menggunakan produk), administrator guide (bagaimana maintain dan configure sistem), dan troubleshooting guide (bagaimana mengatasi common issues). Knowledge handover juga penting—pastikan orang yang akan maintain produk memahami sistem dengan baik.</p>
+
+          <h4 class="font-semibold mt-4 mb-2">Aktivitas Penutupan Proyek</h4>
+          <p><strong>Project Retrospective:</strong> Setelah deliverable dirilis dan stabil, tim berkumpul untuk retrospektif: apa yang berhasil dilakukan dengan baik? apa yang bisa lebih baik? Apa challenges yang dihadapi dan bagaimana diselesaikan? Apa lessons learned untuk diterapkan di proyek berikutnya? Retrospektif ini sangat berharga untuk continuous improvement tim dan organisasi.</p>
+
+          <p class="mt-3"><strong>Final Documentation dan Archiving:</strong> Semua deliverable, dokumentasi, dan pembelajaran dari proyek harus dikumpulkan dan di-archive. Ini termasuk requirement document, design document, implementasi notes, test report, lessons learned, dan apapun lain yang relevan. Archive ini berguna jika ada pertanyaan di masa depan tentang why certain decision dibuat, atau jika ada bug yang perlu di-investigate.</p>
+
+          <p class="mt-3"><strong>Project Sign-off dan Closure:</strong> Formal closure dari proyek meliputi: final approval dari stakeholder bahwa project completed dan acceptable, settlement dari budget atau invoice yang tersisa, dan release anggota tim untuk assignment ke proyek lain. Tim appreciation atau celebration untuk recognize effort dan hard work mereka juga bisa dilakukan.</p>
+
+          <p class="mt-3"><strong>Post-Launch Support:</strong> Setelah rilis, produk akan masuk ke support dan maintenance phase. Bug report dari user akan terus datang dan perlu di-triage, diprioritaskan, dan di-fix dalam maintenance release. Feature request juga akan datang dan dapat dipertimbangkan untuk release berikutnya. Tim support atau maintenance team harus siap untuk handle ini dengan responsif.</p>
+
+          <h4 class="font-semibold mt-4 mb-2">Deliverable Tahap Rilis dan Penutupan</h4>
+          <ul class="list-disc pl-5 mt-2 space-y-1">
+            <li>Release Package: Deliverable final yang siap untuk distribution (software build, design files, documentation, dll)</li>
+            <li>Release Notes: Daftar apa yang baru, improvement, dan fix yang dilakukan</li>
+            <li>User Documentation: User guide, FAQ, troubleshooting guide untuk end user</li>
+            <li>Administrator/Maintenance Documentation: Guide untuk maintain dan support produk</li>
+            <li>Deployment Guide: Step-by-step panduan untuk deploy atau distribute deliverable</li>
+            <li>Monitoring dan Support Plan: Plan untuk monitoring dan support post-launch</li>
+            <li>Retrospective Report: Lessons learned, challenges, dan success factors dari proyek</li>
+            <li>Project Closure Report: Status akhir, archive location, dan handover information</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Model Linear vs Iteratif -->
+    <div class="accordion-item bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-sm border-l-4 border-blue-500">
+      <button class="accordion-header w-full flex justify-between items-center p-5 text-left font-semibold text-blue-600 dark:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-700 transition">
+        <span>Model Pengembangan Proyek: Linear vs Iteratif</span>
+        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+      </button>
+      <div class="accordion-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-gray-50 dark:bg-gray-700 text-sm text-gray-800 dark:text-gray-200">
+        <div class="p-5">
+          <h4 class="font-semibold mt-2 mb-2">Model Linear (Waterfall)</h4>
+          <p>
+            Model linear adalah pendekatan di mana tahap proyek mengikuti urutan yang fixed: Perencanaan → Analisis & Desain → Implementasi → Testing → Rilis. Setiap tahap harus selesai sebelum tahap berikutnya dimulai. Dokumentasi yang comprehensive dibuat di awal proyek, dan change request di tengah proyek memerlukan effort yang significant.
+          </p>
+          <p class="mt-2"><strong>Kapan menggunakan model linear:</strong></p>
+          <ul class="list-disc pl-5 mt-1 space-y-1">
+            <li>Requirement sudah jelas, detail, dan tidak likely berubah</li>
+            <li>Project timeline dan scope fixed dan critical</li>
+            <li>Regulatory compliance memerlukan dokumentasi extensive dan traceability</li>
+            <li>Tim geografis tersebar dan komunikasi real-time sulit</li>
+          </ul>
+          <p class="mt-2">Contoh: sistem banking, medical system, government system</p>
+
+          <h4 class="font-semibold mt-4 mb-2">Model Iteratif (Agile)</h4>
+          <p>
+            Model iteratif adalah pendekatan di mana proyek dibagi menjadi iteration atau sprint (periode pendek, biasanya 1-2 minggu). Setiap sprint menghasilkan deliverable yang bisa di-evaluate dan di-feedback oleh stakeholder. Change dan feedback dari stakeholder diintegrasikan regular ke dalam rencana, dan dokumentasi lebih lightweight dan practical dibanding model linear.
+          </p>
+          <p class="mt-2"><strong>Kapan menggunakan model iteratif:</strong></p>
+          <ul class="list-disc pl-5 mt-1 space-y-1">
+            <li>Requirement tidak jelas atau likely berubah seiring waktu</li>
+            <li>Butuh feedback dari stakeholder atau user regular</li>
+            <li>Timeline fleksibel dan prioritas adalah deliver value incrementally</li>
+            <li>Tim co-located atau komunikasi synchronous mudah</li>
+          </ul>
+          <p class="mt-2">Contoh: startup product, consumer-facing application, internal tools</p>
+
+          <h4 class="font-semibold mt-4 mb-2">Hybrid Approach</h4>
+          <p>
+            Banyak organisasi modern menggunakan hybrid approach yang menggabungkan best practices dari keduanya. Misalnya, tahap perencanaan dan desain menggunakan pendekatan linear yang lebih terstruktur, sementara tahap implementasi menggunakan iterasi untuk feedback regular. Approach ini memberikan fleksibilitas sambil tetap maintain struktur dan documentation yang cukup.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Best Practices -->
+    <div class="accordion-item bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-sm border-l-4 border-blue-500">
+      <button class="accordion-header w-full flex justify-between items-center p-5 text-left font-semibold text-blue-600 dark:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-700 transition">
+        <span>Best Practices Lintas Tahap</span>
+        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+      </button>
+      <div class="accordion-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-gray-50 dark:bg-gray-700 text-sm text-gray-800 dark:text-gray-200">
+        <div class="p-5">
+          <ul class="space-y-4">
+            <li><strong>Komunikasi yang Jelas dan Regular:</strong> Komunikasi yang baik antara tim member, stakeholder, dan user adalah kunci kesuksesan proyek. Regular status meeting atau standup (15-30 menit, setiap hari atau setiap minggu tergantung durasi proyek) dapat membantu team tetap aligned dan mengidentifikasi issue dengan cepat. Transparent communication tentang progress, challenge, dan adjustment yang diperlukan membangun trust dengan stakeholder. Jangan hide masalah—inform early sehingga ada waktu untuk action.</li>
+            
+            <li><strong>Dokumentasi Sejak Awal:</strong> Dokumentasi harus dimulai dari tahap awal proyek dan di-maintain secara regular, jangan menunggu sampai akhir project. Dokumentasi yang baik tidak perlu lengthy atau formal—cukup clear dan actionable. Good documentation memudahkan onboarding tim member baru, troubleshooting issue di masa depan, dan knowledge preservation. Dokumentasi juga penting untuk compliance dan audit trail jika diperlukan.</li>
+            
+            <li><strong>Quality Over Speed:</strong> Walaupun deadline penting, quality deliverable lebih important daripada rush dan deliver subpar work. Quality check harus dimulai dari awal tahap implementasi, bukan menunggu akhir. Invest time di awal untuk prevent issue di kemudian hari adalah lebih ekonomis daripada rush dan fix issue later. "Do it right the first time" mindset menghemat time dan cost overall.</li>
+            
+            <li><strong>Collaboration dan Knowledge Sharing:</strong> Proyek adalah effort kolaboratif. Knowledge sharing antara tim member, code review, dan collaborative problem solving membuat quality deliverable lebih tinggi. Silo mentality atau "ini pekerjaan saya" dapat menyebabkan missed opportunity untuk improvement dan innovation.</li>
+            
+            <li><strong>Adaptive Planning:</strong> Walaupun perencanaan penting, plan juga perlu adaptive terhadap reality dan learning yang terjadi selama project. Regular review dan adjustment terhadap plan (untuk model iteratif) atau proactive risk management (untuk model linear) dapat memastikan proyek tetap on track. Perfect plan yang tidak flexible dapat menjadi obstacle daripada help.</li>
+            
+            <li><strong>Stakeholder Engagement:</strong> Melibatkan stakeholder secara regular dalam proyek—tidak hanya di awal dan akhir—dapat mencegah mismatch expectation dan deliver result yang lebih sesuai dengan kebutuhan. Stakeholder input dan feedback valuable untuk prioritization dan adjustment yang diperlukan.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Studi Kasus -->
+    <div class="accordion-item bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-sm border-l-4 border-blue-500">
+      <button class="accordion-header w-full flex justify-between items-center p-5 text-left font-semibold text-blue-600 dark:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-700 transition">
+        <span>Studi Kasus: Sistem Booking Ruang Meeting untuk Perusahaan</span>
+        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+      </button>
+      <div class="accordion-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-gray-50 dark:bg-gray-700 text-sm text-gray-800 dark:text-gray-200">
+        <div class="p-5">
+          <h4 class="font-semibold mb-2">Deskripsi Proyek</h4>
+          <p>
+            Proyek ini bertujuan untuk membuat web application yang memungkinkan employee untuk book ruang meeting dengan mudah. Employee bisa lihat availability ruang, pilih ruang dan waktu, dan system akan send confirmation email.
+          </p>
+          <p class="mt-2">
+            Scope: web platform saja (mobile app termasuk di fase 2), untuk 500 employee internal, timeline 3 bulan, budget terbatas.
+          </p>
+
+          <h4 class="font-semibold mt-4 mb-2">Penerapan Tahapan</h4>
+          <p><strong>Tahap 1 - Inisiasi (Week 1):</strong> Project charter disiapkan. Requirement gathering dengan HR dan operations team yang akan use system. Decision dibuat: tech stack React + Node.js + MongoDB (karena team sudah familiar). Team composition: 1 project manager, 2 frontend developer, 2 backend developer, 1 QA. Timeline breakdown: 2 minggu design, 6 minggu development, 2 minggu testing, 1 minggu deployment & support.</p>
+
+          <p class="mt-3"><strong>Tahap 2 - Analisis & Desain (Week 2-3):</strong> Requirement dianalysis dan di-break down menjadi user story: "As employee, saya ingin dapat lihat available ruang di calendar view, sehingga saya dapat dengan mudah pick ruang dan waktu". Desain database dengan table untuk rooms, bookings, users, notifications. Wireframe dibuat untuk halaman home (calendar view), room detail, booking confirmation, dan admin dashboard. Prototype dibuat untuk validate calendar interaction yang intuitive.</p>
+
+          <p class="mt-3"><strong>Tahap 3 - Implementasi (Week 4-9):</strong> Sprint 1 (week 4-5): Backend setup, authentication API, room list API, booking CRUD endpoint. Frontend setup, login page, room list page, basic styling. Sprint 2 (week 6): Calendar view component, booking flow, confirmation page. Backend notification service. Sprint 3 (week 7-8): Admin dashboard untuk manage ruang dan approval flow, email notification, conflict detection. Sprint 4 (week 9): Integration testing, performance optimization, deployment preparation. Setiap sprint diakhiri dengan sprint review dan stakeholder feedback.</p>
+
+          <p class="mt-3"><strong>Tahap 4 - QA dan Refinement (Week 10-11):</strong> Functional testing dari semua fitur oleh QA team. User testing dengan 10-15 employee dari berbagai department untuk validate usability. Bug fixing berdasarkan feedback. Performance testing simulasi 100+ concurrent users. Final review dari stakeholder dan sign-off.</p>
+
+          <p class="mt-3"><strong>Tahap 5 - Rilis (Week 12):</strong> User training dan documentation disiapkan. Soft launch ke pilot group (50 employee) untuk catch any last-minute issue. Monitoring ketat atas performance dan error log. Gradual rollout ke semua employee setelah 1 minggu soft launch stabil. Dedicated support team standby untuk support pertanyaan pengguna.</p>
+
+          <h4 class="font-semibold mt-4 mb-2">Learning Point dari Studi Kasus</h4>
+          <p>
+            Proyek ini menunjukkan bagaimana 5 tahapan diterapkan dalam project nyata, dari perencanaan, desain yang melibatkan stakeholder, iterative development dengan sprint, quality assurance yang involve user, hingga rilis yang carefully planned dengan monitoring dan support yang baik.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Kesimpulan -->
+    <section class="bg-white dark:bg-gray-800 p-5 rounded-xl border-l-4 border-blue-500 shadow-sm">
+      <h2 class="font-bold text-lg text-blue-700 dark:text-blue-400 mb-3">Kesimpulan</h2>
+      <p class="text-sm leading-relaxed text-gray-800 dark:text-gray-200">
+        Pengembangan proyek yang sukses memerlukan tahapan yang terstruktur dan terencana dengan baik, baik itu software development, hardware creation, design project, atau project lainnya. Dari inisiasi dan perencanaan yang jelas, melalui analisis & desain yang matang, implementasi yang disciplined, quality assurance yang comprehensive, hingga rilis dan penutupan yang smooth—setiap tahap memiliki peran penting dan saling terkait.
+      </p>
+      <p class="text-sm mt-3 text-gray-800 dark:text-gray-200">
+        Kesuksesan proyek bukan hanya bergantung pada technical skill tim, tapi juga faktor lain seperti:
+      </p>
+      <ul class="list-disc pl-5 mt-2 text-sm text-gray-800 dark:text-gray-200 space-y-1">
+        <li><strong>Clear Communication:</strong> Semua pihak (team, stakeholder, user) memahami goal, plan, dan progress proyek</li>
+        <li><strong>Well-Coordinated Team:</strong> Setiap anggota team tahu peran dan tanggung jawab mereka</li>
+        <li><strong>Quality Mindset:</strong> Quality check dimulai dari awal, bukan akhir proyek</li>
+        <li><strong>Stakeholder Engagement:</strong> Regular feedback dan input dari stakeholder</li>
+        <li><strong>Adaptive Planning:</strong> Plan yang fleksibel terhadap reality dan learning yang terjadi</li>
+        <li><strong>Documentation:</strong> Dokumentasi yang clear dan updated untuk knowledge preservation</li>
+      </ul>
+      <p class="text-sm mt-3 text-gray-800 dark:text-gray-200">
+        Dengan memahami dan menerapkan 5 tahapan pengembangan proyek ini dengan baik, probabilitas menghasilkan deliverable berkualitas tinggi yang memenuhi kebutuhan stakeholder menjadi jauh lebih tinggi. Ingat, tidak ada proyek yang sempurna, tapi dengan struktur yang baik, challenge dan problem dapat dimanage dengan lebih effective.
+      </p>
+    </section>
+
+    <footer class="text-center text-gray-500 dark:text-gray-400 text-xs py-6">
+      © 2026 | Materi Pengajaran - Tahapan Proyek Development
+    </footer>
+  </main>
+</body>
+</html>

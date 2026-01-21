@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary: #3b82f6;
+  --primary-dark: #1e40af;
+  --accent: #dbeafe;
+  --text: #1e293b;
+  --text-light: #64748b;
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --border: #e2e8f0;
+}
+
+.dark {
+  --primary: #60a5fa;
+  --primary-dark: #93c5fd;
+  --accent: #1e293b;
+  --text: #f1f5f9;
+  --text-light: #cbd5e1;
+  --bg: #0f172a;
+  --card: #1e293b;
+  --border: #334155;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  transition: background-color 0.3s, color 0.3s;
+  /* Tambahkan padding horizontal global */
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Header */
+header {
+  background-color: var(--card);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  z-index: 50;
+  /* Pastikan header juga mengikuti padding global */
+  margin-left: -1rem;
+  margin-right: -1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+header h1 {
+  color: var(--primary);
+}
+header p {
+  color: var(--text-light);
+}
+
+/* Main Layout */
+main {
+  max-width: 48rem; /* ~768px, sesuai Tailwind 'max-w-3xl' */
+  margin: 0 auto;
+  padding-bottom: 2rem;
+}
+
+/* Card Styling */
+section,
+.accordion-item {
+  background-color: var(--card);
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03);
+  border-left: 4px solid var(--primary);
+  border-left: 4px solid var(--primary);
+  margin-bottom: 1.5rem;
+  /* Tambahkan padding internal agar teks tidak mepet ke border */
+  padding: 1.25rem;
+}
+
+/* Accordion Header */
+.accordion-header {
+  width: 100%;
+  padding: 1.25rem 1.25rem;
+  text-align: left;
+  font-weight: 600;
+  color: var(--primary);
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.2s;
+}
+.accordion-header:hover {
+  background-color: var(--accent);
+}
+
+/* Accordion Content */
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out, padding 0.3s ease;
+  background-color: var(--accent);
+  color: var(--text);
+}
+.accordion-content.open {
+  padding: 0 1.25rem 1.25rem;
+}
+.accordion-content p,
+.accordion-content li {
+  font-size: 0.875rem;
+  margin-bottom: 0.75rem;
+  color: var(--text);
+}
+.accordion-content ul {
+  padding-left: 1.25rem;
+  margin: 0.75rem 0;
+}
+.accordion-content h4 {
+  font-weight: 600;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary-dark);
+}
+
+/* Icons */
+.accordion-header i {
+  transition: transform 0.3s ease;
+}
+.accordion-header i.rotate-180 {
+  transform: rotate(180deg);
+}
+
+/* Footer */
+footer {
+  color: var(--text-light);
+  font-size: 0.75rem;
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  /* Sesuaikan dengan padding global */
+  margin-left: -1rem;
+  margin-right: -1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Scrollbar (optional) */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #475569;
+}
+
+/* Responsive adjustments */
+@media (min-width: 640px) {
+  body {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  header,
+  footer {
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
